@@ -13,6 +13,10 @@
     ],
     "author": "Emanuele Aliberti <dev@mtka.eu>",
     "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ealib/md-api-hello-world.git"
+    },
     "dependencies": {
         "colors": "^1.4.0",
         "node-mdaemon-api": "^21.0.2-alpha.1"
