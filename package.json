@@ -1,0 +1,23 @@
+{
+    "name": "md-api-hello-world",
+    "version": "1.0.0",
+    "description": "Say hello to MDaemon.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index"
+    },
+    "keywords": [
+        "binding",
+        "email",
+        "mdaemon"
+    ],
+    "author": "Emanuele Aliberti <dev@mtka.eu>",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "node-mdaemon-api": "^21.0.2-alpha.1"
+    },
+    "devDependencies": {
+        "@types/colors": "^1.2.1"
+    }
+}
