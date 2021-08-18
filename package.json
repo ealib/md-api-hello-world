@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "colors": "^1.4.0",
-        "node-mdaemon-api": "^21.0.2-alpha.1"
+        "node-mdaemon-api": "^21.0.3-alpha.4"
     },
     "devDependencies": {
         "@types/colors": "^1.2.1"
