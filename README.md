@@ -9,7 +9,7 @@ number.
 
 ## License
 
-Copyright 2021 Emanuele Aliberti, MTKA
+Copyright &copy; 2021 Emanuele Aliberti, MTKA
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
