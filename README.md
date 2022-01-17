@@ -4,18 +4,16 @@
 
 This is a really basic example to use `node-mdaemon-api`.
 
-It checks if MDaemon 21.5.x is present and, if so, it prints its version
-number.
+It checks if MDaemon 21.5.x is present and, if so:
+
+- it prints MDaemon's version number
+- it prints the domain names MDaemon manages
 
 ## Installation
 
 After cloning this repository, install its dependencies:
 
     npm install
-
-If using *npm* version greater than 6
-
-    npm install --legacy-peer-deps
 
 ## License
 
