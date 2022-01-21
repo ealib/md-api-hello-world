@@ -26,9 +26,22 @@ function demoDomains() {
     });
 }
 
+function demoUsers() {
+    const users = md.readUsersSync() || [];
+    console.log('Users:');
+    users.forEach(user => {
+        if (user.FullName) {
+            console.log(`- "${chalk.green(user.FullName)}" <${chalk.yellow(user.Email)}>`);
+        } else {
+            console.log(`- ${chalk.yellow(user.Email)}`);
+        }
+    });
+}
+
 const demos = [
     demoVersion,
     demoDomains,
+    demoUsers,
 ];
 
 if (md.isReady) {

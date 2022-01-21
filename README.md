@@ -8,6 +8,7 @@ It checks if MDaemon 21.5.x is present and, if so:
 
 - it prints MDaemon's version number
 - it prints the domain names MDaemon manages
+- it prints all users MDaemon manages email for
 
 ## Installation
 
