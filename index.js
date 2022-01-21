@@ -27,7 +27,7 @@ function demoDomains() {
 }
 
 function demoUsers() {
-    const users = md.readUsersSync() || [];
+    const users = md.readUsersSync() ?? [];
     console.log('Users:');
     users.forEach(user => {
         if (user.FullName) {
