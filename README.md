@@ -16,6 +16,14 @@ After cloning this repository, install its dependencies:
 
     npm install
 
+## How to start it
+
+There are three ways to start this tiny example:
+
+1. `npm start`
+2. `node index`
+3. `node index.js`
+
 ## License
 
 Copyright &copy; 2021, 2022 Emanuele Aliberti, MTKA
