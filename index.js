@@ -13,12 +13,22 @@ if (!md.versionsMatch) {
     throw new Error(`MDaemon version and ${moduleName} version do NOT match!`);
 }
 
-function demoVersion() {
+function yn(flag) {
+    return flag ? 'yes' : 'no';
+}
+
+function printFunctionBanner(fn) {
+    let banner = `   ${chalk.black(fn.name)}`;
+    const tail = ' '.repeat(80 - banner.length);
+    console.log(chalk.bgYellow(banner + tail));
+}
+
+function printVersion() {
     const mdInfo = md.getMdInfo();
     console.log(chalk.green(`Hello, MDaemon ${chalk.yellow(mdInfo.version.full)}!`));
 }
 
-function demoDomains() {
+function printDomains() {
     const domains = md.MD_GetDomainNames() ?? [];
     console.log('Domains:');
     domains.forEach(domainName => {
@@ -26,7 +36,7 @@ function demoDomains() {
     });
 }
 
-function demoUsers() {
+function printUsers() {
     const users = md.readUsersSync() ?? [];
     console.log('Users:');
     users.forEach(user => {
@@ -38,17 +48,30 @@ function demoUsers() {
     });
 }
 
+function printClusterStatus() {
+    console.log('Clustering:');
+    console.log(`- enabled              : ${yn(md.MD_ClusterGetEnabled())}`);
+    console.log(`- primary node         : ${yn(md.MD_ClusterLocalNodeIsPrimary())}`);
+	console.log(`- primary computer name: ${md.MD_ClusterGetPrimaryComputerName()}`);
+	console.log(`- local node ID        : ${md.MD_ClusterGetLocalNodeId()}`);
+	console.log(`- local server ID      : ${md.MD_ClusterGetLocalServerId()}`);
+    console.log(`- local server UUID    : ${md.MD_ClusterGetLocalServerGUID()}`);
+}
+
 const demos = [
-    demoVersion,
-    demoDomains,
-    demoUsers,
+    printVersion,
+    printDomains,
+    printUsers,
+    printClusterStatus,
 ];
 
 if (md.isReady) {
     demos.forEach(demo => {
+        printFunctionBanner(demo);
         demo();
         console.log();
     });
+    printFunctionBanner({ name: 'Done'});
 } else {
     console.error(`MDaemon ${chalk.red('not')} available.`);
 }

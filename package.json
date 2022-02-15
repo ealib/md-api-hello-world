@@ -1,6 +1,6 @@
 {
     "name": "md-api-hello-world",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Say hello to MDaemon.",
     "main": "index.js",
     "type": "module",
