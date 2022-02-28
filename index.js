@@ -29,32 +29,52 @@ function printVersion() {
 }
 
 function printDomains() {
-    const domains = md.MD_GetDomainNames() ?? [];
     console.log('Domains:');
-    domains.forEach(domainName => {
-        console.log(`- ${chalk.yellow(domainName)}`);
-    });
+    const domains = md.MD_GetDomainNames() ?? [];
+    if (domains.length) {
+        domains.forEach(domainName => {
+            console.log(`- ${chalk.yellow(domainName)}`);
+        });
+    } else {
+        console.log('\tNo domain.');
+    }
 }
 
 function printUsers() {
-    const users = md.readUsersSync() ?? [];
     console.log('Users:');
-    users.forEach(user => {
-        if (user.FullName) {
-            console.log(`- "${chalk.green(user.FullName)}" <${chalk.yellow(user.Email)}>`);
-        } else {
-            console.log(`- ${chalk.yellow(user.Email)}`);
-        }
-    });
+    const users = md.readUsersSync() ?? [];
+    if (users.length) {
+        users.forEach(user => {
+            if (user.FullName) {
+                console.log(`- "${chalk.green(user.FullName)}" <${chalk.yellow(user.Email)}>`);
+            } else {
+                console.log(`- ${chalk.yellow(user.Email)}`);
+            }
+        });
+    } else {
+        console.log('\tNo user.');
+    }
+}
+
+function printGroups() {
+    console.log('Groups:');
+    const groups = md.MD_GroupGetAll() ?? [];
+    if (groups.length) {
+        groups.forEach(groupName => {
+            console.log(`- ${chalk.yellow(groupName)}`);
+        });
+    } else {
+        console.log('\tNo group.');
+    }
 }
 
 function printClusterStatus() {
     console.log('Clustering:');
     console.log(`- enabled              : ${yn(md.MD_ClusterGetEnabled())}`);
     console.log(`- primary node         : ${yn(md.MD_ClusterLocalNodeIsPrimary())}`);
-	console.log(`- primary computer name: ${md.MD_ClusterGetPrimaryComputerName()}`);
-	console.log(`- local node ID        : ${md.MD_ClusterGetLocalNodeId()}`);
-	console.log(`- local server ID      : ${md.MD_ClusterGetLocalServerId()}`);
+    console.log(`- primary computer name: ${md.MD_ClusterGetPrimaryComputerName()}`);
+    console.log(`- local node ID        : ${md.MD_ClusterGetLocalNodeId()}`);
+    console.log(`- local server ID      : ${md.MD_ClusterGetLocalServerId()}`);
     console.log(`- local server UUID    : ${md.MD_ClusterGetLocalServerGUID()}`);
 }
 
@@ -62,6 +82,7 @@ const demos = [
     printVersion,
     printDomains,
     printUsers,
+    printGroups,
     printClusterStatus,
 ];
 
@@ -71,7 +92,7 @@ if (md.isReady) {
         demo();
         console.log();
     });
-    printFunctionBanner({ name: 'Done'});
+    printFunctionBanner({ name: 'Done' });
 } else {
     console.error(`MDaemon ${chalk.red('not')} available.`);
 }
