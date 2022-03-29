@@ -8,12 +8,14 @@ It checks if MDaemon 21.5.x is present and whether the APIs are
 compatible. If so, it shows a simple menu like the following:
 
     1. MDaemon Version
-    2. Module Version
-    3. List Domains
-    4. List Users
-    5. List User Groups
-    6. Cluster Status
-    7. Quit
+    2. MDaemon Modules
+    3. Module Version
+    4. Domains
+    5. Users
+    6. User Groups
+    7. Mailing Lists
+    8. Cluster Status
+    9. Quit
 
 ## Installation
 
