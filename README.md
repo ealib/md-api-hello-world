@@ -4,13 +4,16 @@
 
 This is a really basic example to use `node-mdaemon-api`.
 
-It checks if MDaemon 21.5.x is present and, if so:
+It checks if MDaemon 21.5.x is present and whether the APIs are
+compatible. If so, it shows a simple menu like the following:
 
-- it prints MDaemon's version number
-- it prints the domain names MDaemon manages
-- it prints all users MDaemon manages email for
-- it prints all user groups defined in MDaemon
-- it prints a summary of local node clustering configuration
+    1. MDaemon Version
+    2. Module Version
+    3. List Domains
+    4. List Users
+    5. List User Groups
+    6. Cluster Status
+    7. Quit
 
 ## Installation
 
