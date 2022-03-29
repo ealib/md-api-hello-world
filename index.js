@@ -52,8 +52,9 @@ class Terminal {
         console.log(chalk.bgRed.white(text));
     }
 
-    printVersion(product, version) {
-        console.log(chalk.green(product) + ' ' + chalk.yellow(version));
+    printVersion(product, version, prefix) {
+        const pfx = prefix ?? '';
+        console.log(pfx + chalk.green(product) + ' ' + chalk.yellow(version));
     }
 
     menu(features) {
@@ -99,6 +100,14 @@ function yn(flag) {
 function doPrintMDaemonVersion() {
     const mdInfo = md.getMdInfo();
     term.printVersion('MDaemon', mdInfo.version.full);
+}
+
+function doPrintMDaemonModules() {
+    term.printTitle('Modules');
+    const versions = md.versions;
+    Object.keys(versions).sort().forEach(key => {
+        term.printVersion(key, versions[key].full, '- ');
+    });
 }
 
 function doPrintModuleVersion() {
@@ -173,6 +182,7 @@ function bootstrap() {
     const ee = new UiEventEmitter();
     const features = [
         new Feature('MDaemon Version', doPrintMDaemonVersion),
+        new Feature('MDaemon Modules', doPrintMDaemonModules),
         new Feature('Module Version', doPrintModuleVersion),
         new Feature('List Domains', doPrintDomains),
         new Feature('List Users', doPrintUsers),
