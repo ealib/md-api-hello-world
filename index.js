@@ -155,6 +155,19 @@ function doPrintGroups() {
     }
 }
 
+function doPrintMailingLists() {
+    const lists = md.MD_ListGetNames();
+    if (lists.length) {
+        term.printTitle(`Lists (${lists.length}/${md.MD_ListGetCount()})`);
+        lists.forEach(list => {
+            term.print(`- ${chalk.green(list)}`);
+        });
+    } else {
+        term.printTitle('Lists');
+        term.printNoItems('list');
+    }
+}
+
 function doPrintClusterStatus() {
     term.printTitle('Clustering');
     const lines = [
@@ -184,9 +197,10 @@ function bootstrap() {
         new Feature('MDaemon Version', doPrintMDaemonVersion),
         new Feature('MDaemon Modules', doPrintMDaemonModules),
         new Feature('Module Version', doPrintModuleVersion),
-        new Feature('List Domains', doPrintDomains),
-        new Feature('List Users', doPrintUsers),
-        new Feature('List User Groups', doPrintGroups),
+        new Feature('Domains', doPrintDomains),
+        new Feature('Users', doPrintUsers),
+        new Feature('User Groups', doPrintGroups),
+        new Feature('Mailing Lists', doPrintMailingLists),
         new Feature('Cluster Status', doPrintClusterStatus),
         new Feature('Quit', doQuit),
     ];
