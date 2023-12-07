@@ -21,7 +21,7 @@ compatible. If so, it shows a simple menu like the following:
 
 After cloning this repository, install its dependencies:
 
-    npm install
+    yarn install
 
 ## How to start it
 
