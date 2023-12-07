@@ -4,7 +4,7 @@
 
 This is a really basic example to use `node-mdaemon-api`.
 
-It checks if MDaemon 23.0.x is present and whether the APIs are
+It checks if MDaemon 23.5.x is present and whether the APIs are
 compatible. If so, it shows a simple menu like the following:
 
     1. MDaemon Version
@@ -27,7 +27,7 @@ After cloning this repository, install its dependencies:
 
 There are three ways to start this tiny example:
 
-1. `npm start`
+1. `yarn start`
 2. `node index`
 3. `node index.js`
 

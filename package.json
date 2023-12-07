@@ -19,7 +19,7 @@
         "url": "https://github.com/ealib/md-api-hello-world.git"
     },
     "dependencies": {
-        "chalk": "^5.2.0",
-        "node-mdaemon-api": "^23.0.0-alpha.21"
+        "chalk": "^5.3.0",
+        "node-mdaemon-api": "^23.5.1-alpha.22"
     }
 }
