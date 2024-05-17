@@ -33,7 +33,7 @@ There are three ways to start this tiny example:
 
 ## License
 
-Copyright &copy; 2021-2023 Emanuele Aliberti, MTKA
+Copyright &copy; 2021-2024 Emanuele Aliberti, MTKA
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
