@@ -7,7 +7,7 @@ chalk@^5.3.0:
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.3.0.tgz#67c20a7ebef70e7f3970a01f90fa210cb6860385"
   integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
 
-node-mdaemon-api@^24.0.0-alpha.32:
-  version "24.0.0-alpha.32"
-  resolved "https://registry.yarnpkg.com/node-mdaemon-api/-/node-mdaemon-api-24.0.0-alpha.32.tgz#f0e73b6771d9a9bbc1a50c2128a583bf1adad4e5"
-  integrity sha512-eSmWIIZGShywhCjhyoh2QNBy0Wm5Jri3lHPvILSxZvPAuZrGcwnc6OW4rZEyUdC4/Pr8C4pOEyy8+klxgxRsKw==
+node-mdaemon-api@^24.0.1-alpha.33:
+  version "24.0.1-alpha.33"
+  resolved "https://registry.yarnpkg.com/node-mdaemon-api/-/node-mdaemon-api-24.0.1-alpha.33.tgz#e0e14ed2079d3b3ef92e0241e97ea00ff2d09c4a"
+  integrity sha512-bFPjTIdgIhS1dDR6OvbHbFMS1vmibUaICOu56r4TT0wnMUG1mAV5bK8Qv3dOKPi/xCZ4Q5ysL1sg6PAX6SAxqQ==
