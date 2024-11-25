@@ -20,6 +20,6 @@
     },
     "dependencies": {
         "chalk": "^5.3.0",
-        "node-mdaemon-api": "^24.0.2-alpha.34"
+        "node-mdaemon-api": "^24.5.2-alpha.37"
     }
 }

@@ -4,7 +4,7 @@
 
 This is a really basic example to use `node-mdaemon-api`.
 
-It checks if MDaemon 24.0.x is present and whether the APIs are
+It checks if MDaemon 24.5.x is present and whether the APIs are
 compatible. If so, it shows a simple menu like the following:
 
     1. MDaemon Version
