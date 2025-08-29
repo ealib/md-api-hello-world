@@ -9,26 +9,26 @@ importers:
   .:
     dependencies:
       chalk:
-        specifier: ^5.3.0
-        version: 5.4.1
+        specifier: ^5.6.0
+        version: 5.6.0
       node-mdaemon-api:
-        specifier: 25.0.0-alpha.38
-        version: 25.0.0-alpha.38
+        specifier: 25.0.3-alpha.42
+        version: 25.0.3-alpha.42
 
 packages:
 
-  chalk@5.4.1:
-    resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
+  chalk@5.6.0:
+    resolution: {integrity: sha512-46QrSQFyVSEyYAgQ22hQ+zDa60YHA4fBstHmtSApj1Y5vKtG27fWowW03jCk5KcbXEWPZUIR894aARCA/G1kfQ==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
-  node-mdaemon-api@25.0.0-alpha.38:
-    resolution: {integrity: sha512-WoIQUv4zvvA0WxQ0Bz2h1EUlAKuTEOFmRnCCm39QDdT3Vw4FgH9solxtAiVOnpN2Rm6/Dyc+VLs9OLjjOdFCiw==}
+  node-mdaemon-api@25.0.3-alpha.42:
+    resolution: {integrity: sha512-8OxCboKz83G819B9tspZCWAHzlpxglB/oKXpUij4oQEAI96ZXdEamcZKLrRrt0XHn2eJJSmfWSOb4sBvHJQcjA==}
     engines: {node: '>=19.0.0 <23'}
     cpu: [x64]
     os: [win32]
 
 snapshots:
 
-  chalk@5.4.1: {}
+  chalk@5.6.0: {}
 
-  node-mdaemon-api@25.0.0-alpha.38: {}
+  node-mdaemon-api@25.0.3-alpha.42: {}
